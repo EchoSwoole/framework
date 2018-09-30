@@ -1,0 +1,26 @@
+{
+    "name": "echoswoole/framework",
+    "description": "Echo Swoole Distributed System(ESDS) framework",
+    "keywords" : ["framework", "swoole", "echoswoole", "async"],
+    "homepage" : "https://www.echoswoole.com/",
+    "license" : "MIT",
+    "authors": [
+        {
+            "name": "Echo Li",
+            "email": "php360@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EchoSwoole\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EchoSwoole\\Tests\\": "tests/"
+        }
+    }
+}
