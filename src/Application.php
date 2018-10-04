@@ -10,14 +10,14 @@ namespace Echoswoole;
 class Application
 {
     /**
-     * The Echoswoole framework version.
+     * Echoswoole版本
      *
      * @var string
      */
     const VERSION = '1.0.0';
 
     /**
-     * The base path for the Echoswoole installation.
+     * Echoswoole根路径
      *
      * @var string
      */
@@ -31,7 +31,7 @@ class Application
     }
 
     /**
-     * Set the base path for the application.
+     * 设置根路径
      *
      * @param  string  $basePath
      * @return $this

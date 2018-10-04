@@ -1,6 +1,6 @@
 <?php
 /**
- * Echoswoole CLI
+ * Echoswoole控制台
  * User: EchoLi
  * Date: 2018/10/3
  * Time: 5:59 PM
@@ -15,12 +15,17 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * The console application that handles the commands
+ * 控制台
  *
  * @author EchoLi <php360@qq.com>
  */
 class Application extends BaseApplication
 {
+    /**
+     * 控制台显示logo
+     *
+     * @var string
+     */
     private static $logo = <<<LOGO
   _____     _          ____                     _
  | ____|___| |__   ___/ ___|_      _____   ___ | | ___
@@ -47,13 +52,15 @@ LOGO;
     }
 
     /**
-     * Initializes all the composer commands.
+     * 初始化控制台命令
+     *
+     * @return array|\Symfony\Component\Console\Command\Command[]
      */
     protected function getDefaultCommands()
     {
         return array_merge(parent::getDefaultCommands(), array(
-            new Command\StartCommand(), // Start Server Command
-            new Command\StartDaemonCommand(), // Run server in background
+            new Command\StartCommand(), // 启动服务命令
+            new Command\StartDaemonCommand(), // 后台守护进程命令
         ));
     }
 
